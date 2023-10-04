@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 10px;
+}
+header h1{
+    font-size: 2rem;
+    font-weight: normal;
+    gap: 1rem;
+}
+.container{
+    background-color: #fff;
+    width: 400px;
+    max-height: 450px;
+    flex-direction: column;
+    padding: 4rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .153);
+    border: 1px solid rgba(0, 0, 0, .1);
+    overflow: hidden;
+    transition: height 2s;
+  
+}
+.add-task{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+}
+input{
+    width: 100%;
+    border-radius: 40px;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .125);
+    background-color: #f5f2f2;
+    padding: 10px;
+}
+#clear{
+    position: absolute;
+    bottom:-50px;
+    right: 0;
+    cursor: pointer;
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: rgb(30, 30, 252);
+}
+button#btnAdd{
+    top: 0;
+    right: 0; 
+    position: absolute;
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 70px;
+    background-color: #ff5845;
+    color: white;
+    padding: .8rem;
+    border-radius: 40px;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.itens{
+    position: relative;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 250px;  
+    padding: 4px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.itens::-webkit-scrollbar{
+    width: 5px;
+}
+.itens::-webkit-scrollbar-thumb{
+    background-color: #ff5845;
+    border-radius: 10px;
+}
+.itens::-webkit-scrollbar-track{
+    background-color: #c8c8c8;
+}
+.item{
+    display: flex;
+    justify-content: space-around;
+   
+    margin-bottom: 1rem;
+}
+.item h3{
+    padding-inline: 1rem;
+    flex: 1;
+    font-weight: normal;
+    font-size: 1rem;
+}
+.item button{
+    margin-left: 5px;
+    padding: .1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+.completed {
+    text-decoration: line-through;
+    font-style: italic;
+}
+.item-removed {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
